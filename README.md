@@ -1,2 +1,2 @@
 # CT-SCAN-App
-![alt text](https://github.com/Sealorent/Image/tree/main/CT_SCAN/diagnose.png?raw=true)
+[![diagnose.png](https://i.postimg.cc/yN4BKf3n/diagnose.png)](https://postimg.cc/w1VncQVs)
