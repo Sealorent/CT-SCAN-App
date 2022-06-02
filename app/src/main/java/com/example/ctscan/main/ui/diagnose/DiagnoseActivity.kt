@@ -16,6 +16,14 @@ class DiagnoseActivity : AppCompatActivity() {
         diagnoseBinding = ActivityDiagnoseBinding.inflate(layoutInflater)
         setContentView(diagnoseBinding.root)
         initUI()
+        diagnoseBinding.btnDiagnose.setOnClickListener {
+            diagnose()
+        }
+    }
+
+    private fun diagnose() {
+        ProcessActivity.start(this)
+        finish()
     }
 
     private fun initUI() {

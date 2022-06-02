@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lbStatus"/>
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

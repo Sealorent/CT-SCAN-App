@@ -14,6 +14,14 @@ class ProcessActivity : AppCompatActivity() {
         processBinding = ActivityProcessBinding.inflate(layoutInflater)
         setContentView(processBinding.root)
         initUI()
+        processBinding.btnCheck.setOnClickListener {
+            checkSeverity()
+        }
+    }
+
+    private fun checkSeverity(){
+        SecondProcessActivity.start(this)
+        finish()
     }
 
     private fun initUI() {
