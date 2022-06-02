@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">CTscan</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="NotHaveAccount">Don’t have an account yet ?</string>
+    <string name="register">Register</string>
+    <string name="desc">description</string>
+    <string name="labelRegister">Welcome to DeteCT</string>
+    <string name="name">Name</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="HaveAccount">Already have an account?</string>
+    <string name="labelLogin">Welcome Back!</string>
+    <string name="diagnose">Diagnose</string>
+    <string name="patientList">Patient List</string>
+    <string name="labelDiagnose">Fill this form to diagnose</string>
+    <string name="Nik">NIK</string>
+    <string name="Age">Age</string>
+    <string name="Address">Address</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="labelGender">Gender</string>
+    <string name="labelAddPhoto">Add Your CT Scan Photo</string>
+    <string name="phase1">Phase I</string>
+    <string name="idUser">ID : xxxx-xxxx-xxxx-xxxx</string>
+    <string name="lbName">Bamabang Sekilas</string>
+    <string name="lbStatus">Status</string>
+    <string name="lbResult">Positive</string>
+    <string name="check">Check Severity</string>
+    <string name="phase2">Phase II</string>
+    <string name="lbStatus2">SEVERITY</string>
+    <string name="lbResult2">2</string>
+    <string name="done">Done</string>
+    <string name="lbTanggal">18 Mei 2022</string>
+    <string name="lbStatuss">Status :</string>
+</resources>
