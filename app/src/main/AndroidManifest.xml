@@ -2,13 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ctscan">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CTscan">
+        android:theme="@style/Theme.CTscan"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".main.ui.diagnose.SecondProcessActivity"
             android:exported="false" />
@@ -19,15 +22,16 @@
             android:name=".main.ui.diagnose.DiagnoseActivity"
             android:exported="false" />
         <activity
-            android:name=".main.menu.MenuActivity"
+            android:name=".main.ui.menu.MenuActivity"
             android:exported="false"
             android:theme="@style/Theme.CTscan.NoActionBar" />
         <activity
             android:name=".main.ui.register.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.CTscan.NoActionBar"/>
         <activity
             android:name=".main.ui.main.MainActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".main.ui.login.LoginActivity"
             android:exported="false"

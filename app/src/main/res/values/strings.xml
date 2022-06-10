@@ -33,4 +33,18 @@
     <string name="done">Done</string>
     <string name="lbTanggal">18 Mei 2022</string>
     <string name="lbStatuss">Status :</string>
+    <string name="error_empty_email">email is empty</string>
+    <string name="error_empty_password">password is empty</string>
+    <string name="message_logout_confirm">Are you sure want logout ?</string>
+    <string name="action_yes">Logout</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_logout">Logout</string>
+    <string name="error_empty_name">Name is Empty</string>
+    <string name="error_empty_nik">NIK is empty</string>
+    <string name="error_empty_age">Age is empty</string>
+    <string name="error_empty_address">Address is empty</string>
+    <string name="title_message">Information</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="title_choose_a_picture">Choose Picture</string>
+
 </resources>

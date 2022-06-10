@@ -81,21 +81,21 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="?attr/textInputFilledStyle"
-        android:id="@+id/filledTextField4"
-        android:layout_marginTop="25dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/ConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField3">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtConfirmPassword"
-            android:layout_width="match_parent"
-            android:backgroundTint="@color/white"
-            android:layout_height="wrap_content"/>
-    </com.google.android.material.textfield.TextInputLayout>
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        style="?attr/textInputFilledStyle"-->
+<!--        android:id="@+id/filledTextField4"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:layout_marginHorizontal="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/ConfirmPassword"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/filledTextField3">-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/edtConfirmPassword"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
     <Button
@@ -110,7 +110,7 @@
         android:backgroundTint="@color/grey"
         android:textColor="@color/white"
         style="@style/Widget.Material3.Button.ElevatedButton"
-        app:layout_constraintTop_toBottomOf="@+id/filledTextField4"
+        app:layout_constraintTop_toBottomOf="@+id/filledTextField3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 

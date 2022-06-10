@@ -1,18 +1,26 @@
 package com.example.ctscan.main.ui.main
 
-import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ctscan.R
 import com.example.ctscan.databinding.ActivityMainBinding
-import com.example.ctscan.main.data.Patient
+import com.example.ctscan.main.Utils.SessionManager
+import com.example.ctscan.main.Utils.ViewStateCallback
+import com.example.ctscan.main.data.Resource
+import com.example.ctscan.main.data.response.AddPatientResponse
+import com.example.ctscan.main.data.response.ResponseGetAllPatient
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() , ViewStateCallback<ResponseGetAllPatient>{
 
     private lateinit var patientAdapter: PatientAdapter
     private lateinit var mainBinding: ActivityMainBinding
+    private lateinit var pref: SessionManager
+    private var token: String? = null
+    private val viewModel by viewModels<MainViewModel>()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,17 +28,26 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         initUI()
-        val data = ArrayList<Patient>()
-
-        for (i in 1..20) {
-            data.add(Patient(1,"bdsau","viky","positive","Female",R.drawable.logo  + i))
-        }
-
-        patientAdapter = PatientAdapter(data)
-
+        pref = SessionManager(this)
+        token = pref.getToken
+        patientAdapter = PatientAdapter()
         mainBinding.rvPatient.apply {
             adapter = patientAdapter
-            layoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL,false)
+            layoutManager = LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL  ,false)
+        }
+        getAllPatient(token.toString())
+
+    }
+
+
+
+    private fun getAllPatient(token:String){
+        viewModel.getAllPatient(token).observe(this){
+            when(it){
+                is Resource.Error -> onFailed(it.message)
+                is Resource.Loading -> onLoading()
+                is Resource.Success -> it.data?.let{ it1 ->onSuccess(it1) }
+            }
         }
     }
 
@@ -44,14 +61,17 @@ class MainActivity : AppCompatActivity() {
         return super.onSupportNavigateUp()
     }
 
+    override fun onLoading() {
+       Toast.makeText(this@MainActivity,"Loading...", Toast.LENGTH_SHORT).show()
+    }
 
+    override fun onFailed(message: String?) {
+        Toast.makeText(this@MainActivity,"Failed...", Toast.LENGTH_SHORT).show()
+    }
 
-    companion object {
-
-        fun start(context: Context) {
-            val intent = Intent(context, MainActivity::class.java)
-            context.startActivity(intent)
-        }
+    override fun onSuccess(data: ResponseGetAllPatient) {
+        val patients = data.listPatient
+        patientAdapter.setAllData(patients)
     }
 
 }
