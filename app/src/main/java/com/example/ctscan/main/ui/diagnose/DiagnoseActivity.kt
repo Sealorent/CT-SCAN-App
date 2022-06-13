@@ -40,7 +40,6 @@ class DiagnoseActivity : AppCompatActivity() , ViewStateCallback<AddPatientRespo
         setContentView(diagnoseBinding.root)
         pref = SessionManager(this@DiagnoseActivity)
         token = pref.getToken
-        Toast.makeText(this@DiagnoseActivity,token.toString(),Toast.LENGTH_SHORT).show()
         initUI()
         radioButton()
         addPhoto()

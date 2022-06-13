@@ -20,6 +20,7 @@ class SessionManager(context: Context) {
 
     fun clearPreferences() {
         editor.clear().apply()
+        editor.commit()
     }
 
     val getToken = prefs.getString(Const.KEY_TOKEN, "")

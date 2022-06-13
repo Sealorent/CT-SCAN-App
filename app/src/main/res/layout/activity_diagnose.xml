@@ -58,6 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/filledTextField">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtNIK"
+            android:maxLength="16"
             android:layout_width="match_parent"
             android:backgroundTint="@color/white"
             android:layout_height="wrap_content"/>
@@ -74,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/filledTextField2">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edtAge"
+            android:maxLength="2"
             android:layout_width="match_parent"
             android:backgroundTint="@color/white"
             android:layout_height="wrap_content"/>
@@ -94,7 +96,6 @@
             android:backgroundTint="@color/white"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
-
 
 
     <TextView

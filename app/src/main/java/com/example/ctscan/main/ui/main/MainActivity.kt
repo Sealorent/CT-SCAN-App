@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() , ViewStateCallback<ResponseGetAllPatie
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         initUI()
-        pref = SessionManager(this)
+        pref = SessionManager(this@MainActivity)
         token = pref.getToken
         patientAdapter = PatientAdapter()
         mainBinding.rvPatient.apply {

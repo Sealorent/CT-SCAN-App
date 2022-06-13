@@ -46,5 +46,7 @@
     <string name="title_message">Information</string>
     <string name="pick_image">Pick Image</string>
     <string name="title_choose_a_picture">Choose Picture</string>
+    <string name="error_invalid_email">Email is invalid</string>
+    <string name="error_nik_must_16">NIK must 16</string>
 
 </resources>

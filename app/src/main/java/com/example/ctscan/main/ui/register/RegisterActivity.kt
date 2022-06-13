@@ -29,8 +29,16 @@ class RegisterActivity : AppCompatActivity() , ViewStateCallback<RegisterRespons
         registerBinding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(registerBinding.root)
         register()
+        goLogin()
     }
 
+    private fun goLogin(){
+        registerBinding.toLogin.setOnClickListener {
+            val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+    }
 
     private fun register(){
         registerBinding.btnRegister.setOnClickListener {
@@ -58,6 +66,7 @@ class RegisterActivity : AppCompatActivity() , ViewStateCallback<RegisterRespons
 
         }
     }
+
 
     override fun onSuccess(data: RegisterResponse) {
         registerBinding.apply {

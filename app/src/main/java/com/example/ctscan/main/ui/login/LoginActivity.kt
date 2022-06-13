@@ -60,7 +60,6 @@ class LoginActivity : AppCompatActivity(), ViewStateCallback<LoginResponse> {
     }
 
     override fun onSuccess(data: LoginResponse) {
-
         loginBinding.apply {
             try {
                 Toast.makeText(this@LoginActivity, "success login", Toast.LENGTH_SHORT).show()
